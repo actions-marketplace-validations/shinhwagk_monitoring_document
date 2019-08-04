@@ -20,4 +20,4 @@
 #   done
 # done
 
-./monitoring $@
+./monitoring.sh $@
