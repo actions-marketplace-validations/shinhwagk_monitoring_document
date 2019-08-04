@@ -9,7 +9,7 @@ action "monitoring" {
 #   args = "\"Hello world, I'm $MY_NAME!\""
 #   uses = "actions/bin/sh@master"
 #   args = ["aaaaa"]
-  args = "kubernetes website 30 content/en"
+  args = "kubernetes website 90 content/en"
 }
 
 action "GitHub Action for Slack" {
