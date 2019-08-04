@@ -5,7 +5,7 @@ workflow "monitoring_cron" {
 
 action "remote-bash" {
   uses = "srt32/git-actions@v0.0.3"
-  args = "./monitoring.sh kubernetes website 31 content/en"
+  args = "l"
 }
 
 action "GitHub Action for Slack" {
