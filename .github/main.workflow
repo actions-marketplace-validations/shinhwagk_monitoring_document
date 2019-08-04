@@ -1,5 +1,6 @@
 workflow "monitoring_cron" {
-  on = "schedule(*/1 * * * *)"
+  on = "push"
+#   on = "schedule(*/1 * * * *)"
   resolves = ["GitHub Action for Slack"]
 }
 
