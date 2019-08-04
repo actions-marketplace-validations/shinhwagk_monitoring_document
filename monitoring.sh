@@ -1,6 +1,7 @@
 #!/bin/sh
 
-git clone https://github.com/$1/$2 && cd $2
+repo_url=https://github.com/$1/$2
+git clone ${repo_url} && cd $2
 
 git config --global log.date local
 
@@ -12,7 +13,7 @@ git log --since="${offset_date}" --pretty=format:"%h" | while read commit_id
 do
   git diff-tree --no-commit-id --name-only -r $commit_id | while read file
   do 
-    if [[ "$(expr match $file $prefix)" != "0" ]]; then echo $file; fi
+    if [[ "$(expr match $file $prefix)" != "0" ]]; then echo ${repo_url}/$file; fi
   done
 done
 echo "#################################################"
