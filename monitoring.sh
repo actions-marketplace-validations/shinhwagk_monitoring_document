@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
+
+git clone https://github.com/$1/$2
+
+cd $2
+
 git config --global log.date local
 
-offset_date=$(date -d "$(date) 1 hours ago" "+%Y-%m-%d %H:%M")
-prefix="content/en"
+offset_date=$(date -d "$(date) $3 hours ago" "+%Y-%m-%d %H:%M")
+prefix=$4
 
 git log --since="${offset_date}" --pretty=format:"%h" | while read commit_id
 do
