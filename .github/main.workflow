@@ -4,11 +4,8 @@ workflow "monitoring_cron" {
 }
 
 action "remote-bash" {
-  uses = "shinhwagk/remote-bash@master"
-  env = {
-    REMOTE_BASH_URL = "https://raw.githubusercontent.com/shinhwagk/monitoring_document/master/monitoring.sh"
-  }
-  args = "kubernetes website 31 content/en"
+  uses = "srt32/git-actions@v0.0.3"
+  args = "./monitoring.sh kubernetes website 31 content/en"
 }
 
 action "GitHub Action for Slack" {
