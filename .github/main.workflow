@@ -1,18 +1,19 @@
 workflow "monitoring_cron" {
   on = "push"
-#   on = "schedule(*/1 * * * *)"
-  resolves = ["GitHub Action for Slack"]
+  resolves = ["monitoring"]
+
+  #   on = "schedule(*/1 * * * *)"
 }
 
 action "monitoring" {
   uses = "./monitoring"
-#   args = "\"Hello world, I'm $MY_NAME!\""
-#   uses = "actions/bin/sh@master"
-#   args = ["aaaaa"]
+  #   args = "\"Hello world, I'm $MY_NAME!\""
+  #   uses = "actions/bin/sh@master"
+  #   args = ["aaaaa"]
   args = "kubernetes website 90 content/en"
-}
+  env = {
+    incoming_webhooks = "https://hooks.slack.com/services/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"
+  }
 
-action "GitHub Action for Slack" {
-  uses = "Ilshidur/action-slack@e53b10281b03b02b016e1c7e6355200ee4d93d6d"
-  needs = ["monitoring"]
+  #   on = "schedule(*/1 * * * *)"
 }
