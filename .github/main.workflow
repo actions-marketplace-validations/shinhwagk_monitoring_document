@@ -8,5 +8,5 @@ action "remote-bash" {
   env = {
     REMOTE_BASH_URL = "https://raw.githubusercontent.com/shinhwagk/monitoring_document/master/monitoring.sh"
   }
-  args = "kubernetes website 1 prefix"
+  args = "kubernetes website 1 content/en"
 }
