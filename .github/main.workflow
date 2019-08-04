@@ -5,8 +5,10 @@ workflow "monitoring_cron" {
 }
 
 action "monitoring" {
-  uses = "actions/bin/sh@master"
-  args = ["ls -l ./ && pwd; /github/workspace/test.sh kubernetes website 30 content/en"]
+#   uses = "actions/bin/sh@master"
+  use = ["./monitoring"]
+  args = ["aaaaa"]
+#   args = ["ls -l ./ && pwd; /github/workspace/test.sh kubernetes website 30 content/en"]
 }
 
 action "GitHub Action for Slack" {
