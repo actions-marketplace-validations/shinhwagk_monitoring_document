@@ -20,5 +20,5 @@
 #   done
 # done
 
-# ./monitoring.sh $@
+./monitoring.sh $@
 ls -l ./
