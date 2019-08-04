@@ -5,9 +5,10 @@ workflow "monitoring_cron" {
 }
 
 action "monitoring" {
+  uses = "./monitoring"
+  args = "\"Hello world, I'm $MY_NAME!\""
 #   uses = "actions/bin/sh@master"
-  uses = ["./monitoring"]
-  args = ["aaaaa"]
+#   args = ["aaaaa"]
 #   args = ["ls -l ./ && pwd; /github/workspace/test.sh kubernetes website 30 content/en"]
 }
 
