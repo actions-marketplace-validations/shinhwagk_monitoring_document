@@ -1,6 +1,6 @@
 workflow "monitoring_cron" {
-  on = "schedule(0 */1 * * *)"
-  resolves = ["remote-bash"]
+  on = "schedule(*/1 * * * *)"
+  resolves = ["GitHub Action for Slack"]
 }
 
 action "remote-bash" {
@@ -8,5 +8,10 @@ action "remote-bash" {
   env = {
     REMOTE_BASH_URL = "https://raw.githubusercontent.com/shinhwagk/monitoring_document/master/monitoring.sh"
   }
-  args = "kubernetes website 1 content/en"
+  args = "kubernetes website 31 content/en"
+}
+
+action "GitHub Action for Slack" {
+  uses = "Ilshidur/action-slack@e53b10281b03b02b016e1c7e6355200ee4d93d6d"
+  needs = ["remote-bash"]
 }
