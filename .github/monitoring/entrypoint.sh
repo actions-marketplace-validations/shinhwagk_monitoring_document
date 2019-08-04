@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh -l
 
 # git clone https://github.com/$1/$2
 
