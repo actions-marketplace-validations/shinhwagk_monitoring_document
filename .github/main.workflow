@@ -11,9 +11,9 @@ action "monitoring" {
   #   uses = "actions/bin/sh@master"
   #   args = ["aaaaa"]
   args = "kubernetes website 90 content/en"
-  env = {
-    incoming_webhooks = "https://hooks.slack.com/services/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"
-  }
+  secrets = ["incoming_webhooks"]
+
+  #   on = "schedule(*/1 * * * *)"
 
   #   on = "schedule(*/1 * * * *)"
 }
