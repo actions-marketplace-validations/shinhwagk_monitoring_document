@@ -13,10 +13,12 @@ action "monitoring" {
   args = "kubernetes website 90 content/en"
   secrets = ["incoming_webhooks"]
   env = {
-    offset_hour = "1"
     owner = "kubernetes"
     prefix = "content/en"
     repo = "website"
+    offset_hours = "1"
+
+    #   on = "schedule(*/1 * * * *)"
 
     #   on = "schedule(*/1 * * * *)"
   }
