@@ -7,6 +7,7 @@ cd $2
 git config --global log.date local
 
 offset_date=$(date -d "$(date) $3 hours ago" "+%Y-%m-%d %H:%M")
+echo $offset_date
 prefix=$4
 
 git log --since="${offset_date}" --pretty=format:"%h" | while read commit_id
