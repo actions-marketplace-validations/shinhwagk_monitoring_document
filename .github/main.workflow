@@ -5,8 +5,8 @@ workflow "monitoring_cron" {
 }
 
 action "monitoring" {
-  uses = "./monitoring"
-  args = "kubernetes website 31 content/en"
+  uses = "actions/bin/sh@master"
+  args = ["ls -ltr"]
 }
 
 action "GitHub Action for Slack" {
