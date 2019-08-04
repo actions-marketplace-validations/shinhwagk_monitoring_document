@@ -1,6 +1,7 @@
 #!/bin/sh
 
 git clone https://github.com/$1/$2
+echo "monitoring: https://github.com/$1/$2"
 
 cd $2
 
