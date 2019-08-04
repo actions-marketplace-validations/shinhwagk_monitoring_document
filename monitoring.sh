@@ -1,12 +1,12 @@
 #!/bin/sh
 
-repo_url=https://github.com/$1/$2
-git clone ${repo_url} && cd $2
+repo_url=https://github.com/${owner}/${repo}
+git clone ${repo_url} && cd ${repo}
 
 git config --global log.date local
 
-offset_date=$(date -d "${3} hours ago" "+%Y-%m-%d %H:%M")
-prefix=$4
+offset_date=$(date -d "${offset_hours} hours ago" "+%Y-%m-%d %H:%M")
+prefix=${prefix}
 
 echo "#################################################"
 git log --since="${offset_date}" --pretty=format:"%h" | while read commit_id
