@@ -14,7 +14,7 @@ jobs:
       env:
         owner: "kubernetes"
         repo: "website"
-        offset_hours: 1
+        offset_hours: 20
         prefix: "content/en"
         secrets: ${{ secrets.incoming_webhooks }}
         
