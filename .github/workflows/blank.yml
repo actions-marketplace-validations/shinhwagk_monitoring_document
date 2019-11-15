@@ -1,8 +1,8 @@
 name: Monitoring
-
-on: 
-  schedule:
-    - cron:  '*/1 * * * *'
+on: [push]
+# on: 
+#   schedule:
+#     - cron:  '*/1 * * * *'
 
 jobs:
   build:
