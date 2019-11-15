@@ -1,6 +1,6 @@
-name: 'Setup Python'
-description: 'Set up a specific version of Python and add the command-line tools to the PATH'
-author: 'GitHub'
+name: 'Monitor Document'
+description: 'a simple monitor document change action'
+author: 'shinhwagk'
 runs:
   using: 'docker'
   image: 'Dockerfile'
