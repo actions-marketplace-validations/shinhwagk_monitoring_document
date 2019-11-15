@@ -7,7 +7,7 @@ name: Monitoring
 
 on: 
   schedule:
-    - cron:  '*/1 * * * *'
+    - cron:  '0 * * * *'
 
 jobs:
   build:
