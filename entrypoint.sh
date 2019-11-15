@@ -20,6 +20,8 @@
 #   done
 # done
 
+echo $incoming_webhooks
+
 repo_url=https://github.com/${owner}/${repo} && echo "monitoring repo: $repo_url"
 git clone ${repo_url} && cd ${repo}
 
