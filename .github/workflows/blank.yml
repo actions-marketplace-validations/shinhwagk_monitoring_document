@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: ./
+    - uses: shinhwagk/monitoring_document@master
       env:
         owner: "kubernetes"
         repo: "website"
