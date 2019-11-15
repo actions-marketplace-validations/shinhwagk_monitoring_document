@@ -20,7 +20,7 @@
 #   done
 # done
 
-repo_url=https://github.com/${owner}/${repo}
+repo_url=https://github.com/${owner}/${repo} && echo "monitoring repo: $repo_url"
 git clone ${repo_url} && cd ${repo}
 
 git config --global log.date local
