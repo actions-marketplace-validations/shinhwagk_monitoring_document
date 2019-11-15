@@ -16,5 +16,5 @@ jobs:
         repo: "website"
         offset_hours: 20
         prefix: "content/en"
-        secrets: ${{ secrets.incoming_webhooks }}
+        incoming_webhooks: ${{ secrets.incoming_webhooks }}
         
