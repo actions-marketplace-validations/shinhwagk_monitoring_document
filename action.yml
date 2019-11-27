@@ -1,6 +1,19 @@
 name: 'Monitor Document'
 description: 'a simple monitor document change action'
 author: 'shinhwagk'
+inputs: 
+  go-version:
+    description: 'The Go version to download (if necessary) and use. Example: 1.9.3'
+    default: '1.10'
+    owner: "kubernetes"
+  repo: 
+    description: 'The Go version to download (if necessary) and use. Example: 1.9.3'
+  offset_hours: 
+    description: 'The Go version to download (if necessary) and use. Example: 1.9.3'
+  prefix:
+    description: 'The Go version to download (if necessary) and use. Example: 1.9.3'
+  incoming_webhooks:
+    description: 'The Go version to download (if necessary) and use. Example: 1.9.3'
 runs:
   using: 'docker'
   image: 'Dockerfile'
