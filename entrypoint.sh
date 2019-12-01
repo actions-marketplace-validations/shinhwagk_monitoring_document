@@ -38,6 +38,7 @@ do
     if [[ "$(expr match $file $prefix)" != "0" ]]; then
       curl -X POST -H 'Content-type: application/json' \
       --data "{\"text\":\"${repo_url}/blob/master/$file\"}" $incoming_webhooks
+      echo "${repo_url}/$file"
     fi
   done
 done
